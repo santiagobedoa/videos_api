@@ -7,7 +7,7 @@ we're going to build a RESTful API in Python using the module **Flask**. Flask i
 * Stands for REpresentational State Transfer.
 * Stands for Application Programming Interface.
 
-Essentially, what a REST API is, is a way for other programs or applications to make CRUD (create, read, update, delete) operations. It's a way to deal with some kind of data in a structured format. We set up a API that has a bunch of endpoints.
+Essentially, what a REST API is, is a way for other programs or applications to make CRUD (create, read, update, delete) operations. It's a way to deal with some kind of data in a structured format. We set up an API that has a bunch of endpoints.
 
 ### Endpoints
 Endpoints are essentially almost like commands or you can think of them almost as just requests. An endpoint send a request and will return a response based on the request that was given. For example, if the request was give me all of the views that are on a specific video, the response would be the number of views that were on that video, let's say that the video didn't exist then the response would be something like 404 not found.
@@ -37,7 +37,7 @@ flask --app hello run
  * Running on http://127.0.0.1:5000 (Press CTRL+C to quit)
  ```
 
- ## flask-resfull
+ ## flask-restfull
  A minimal Flask-RESTful API looks like this:
  ```
 from flask import Flask
@@ -48,9 +48,9 @@ api = Api(app)
 
 # endpoint definition
 class HelloWorld(Resource):
-		# what will be executed when get method is requested
+    # what will be executed when get method is requested
     def get(self):
-			# make sure that the object returned is serializable and deserializable
+	# make sure that the object returned is serializable and deserializable
       	return {'hello': 'world'}
 
 # adding the endpoint and the class that contains the actions
